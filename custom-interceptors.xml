@@ -1,0 +1,11 @@
+<custom-interceptors>
+    <custom-interceptor>
+        <interceptor-class-name>com.singularity.KafkaMarkerMethodInterceptor</interceptor-class-name>
+        <match-class type="matches-class">
+            <name filter-type="equals">com.java.acme.kafka.AcmeKafkaConsumer</name>
+        </match-class>
+        <match-method>
+            <name>startListening</name>
+        </match-method>
+    </custom-interceptor>
+</custom-interceptors>
