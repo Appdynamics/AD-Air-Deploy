@@ -1,6 +1,6 @@
 # AD-Air-Deploy
 
-If deployed to AWS, use something like a t3.large or t3.xlarge linux instance.
+This is a reasonably large application, using 22 containers. If deployed to AWS, use something like a t3.xlarge linux instance.
 
 Dependencies:
 docker
