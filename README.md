@@ -1,13 +1,21 @@
 # AD-Air-Deploy
 
-This is a reasonably large application, using 22 containers. If deployed to AWS, use something like a t3.xlarge linux instance.
+This is a reasonably large application, using 22 containers. If deployed to AWS, use something like a t3.xlarge linux instance (4 CPU, 16 GB memory), with 10 - 20 GB disk space.
 
-Dependencies:
+# Dependencies
+
 docker
+
 docker-compose
+
 git
 
-Update controller.env:
+# run
+
+git clone https://github.com/Appdynamics/AD-Air-Deploy
+
+
+# Update controller.env
 
 APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY= # Access Key from controller
 
