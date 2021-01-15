@@ -2,6 +2,8 @@
 
 This is a reasonably large application, using 22 containers. If deployed to AWS, use something like a t3.xlarge linux instance (4 CPU, 16 GB memory), with 10 - 20 GB disk space.
 
+To run this as a Java-only application instead of a Java / NodeJS / GoLang app, use the java-start.sh and java-stop.sh scripts.
+
 # Dependencies
 
 docker
