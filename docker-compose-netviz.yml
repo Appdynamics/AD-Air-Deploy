@@ -90,6 +90,7 @@ services:
       - JAVA_TOOL_OPTIONS=-javaagent:/opt/appdynamics/java-agent/javaagent.jar
       - APPDYNAMICS_AGENT_TIER_NAME=api-services
       - APPDYNAMICS_AGENT_NODE_NAME=api-services-1
+      - TCP_LOSS=1
     expose:
       - 8080
     volumes:
@@ -139,6 +140,7 @@ services:
       - JAVA_TOOL_OPTIONS=-javaagent:/opt/appdynamics/java-agent/javaagent.jar
       - APPDYNAMICS_AGENT_TIER_NAME=ticket-services
       - APPDYNAMICS_AGENT_NODE_NAME=ticket-services-1
+      - TCP_LOSS=1
     depends_on:
       - kafka
     volumes:
@@ -157,6 +159,7 @@ services:
       - JAVA_TOOL_OPTIONS=-javaagent:/opt/appdynamics/java-agent/javaagent.jar
       - APPDYNAMICS_AGENT_TIER_NAME=booking-services
       - APPDYNAMICS_AGENT_NODE_NAME=booking-services-1
+      - NETWORK_ADDLOSS=1
     depends_on:
       - kafka
     volumes:
@@ -250,6 +253,7 @@ services:
       - JAVA_TOOL_OPTIONS=-javaagent:/opt/appdynamics/java-agent/javaagent.jar
       - APPDYNAMICS_AGENT_TIER_NAME=caching-services
       - APPDYNAMICS_AGENT_NODE_NAME=caching-services-1
+      - NETWORK_ADDLOSS=1
     expose:
       - 8080
     volumes:
