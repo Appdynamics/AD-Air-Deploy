@@ -56,7 +56,7 @@ services:
       - NET_RAW
     expose:
       - 3892
-      
+
 ########################################################
 ### Java
 ########################################################
@@ -83,6 +83,8 @@ services:
     hostname: api-services
     restart: always
     image: appdynamics/ad-air-java-services:netviz
+    deploy:
+      replicas: 3
     env_file: controller.env
     environment:
       - JAVA_TOOL_OPTIONS=-javaagent:/opt/appdynamics/java-agent/javaagent.jar
